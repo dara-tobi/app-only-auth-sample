@@ -12,9 +12,9 @@ async function getStatus() {
 	  bearer_token: response.access_token
 	});
 
-	return app.get("statuses/show",
+	return app.get("search/tweets",
 		{
-			id: "1016078154497048576"
+			'q' : '"Diced Pineapples"'
 		}
 	);
 }
